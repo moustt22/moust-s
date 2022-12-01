@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="20102"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-30 06:37:22 PM"/>
+        <attribute name="created" value="MjAxMDI7TU9VU1RBRkE7MjAyMi0xMS0zMDswNjoyNzo1MSBQTTsyMTI5"/>
+        <attribute name="edited" value="MjAxMDI7TU9VU1RBRkE7MjAyMi0xMS0zMDswNjozNzoyMiBQTTsxOzIyMzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="h1, m1, s1, h2, m2, s2, h3, m3, s3, tmp, tmp2" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter hours,minutes,seconds for the first time&quot;" newline="True"/>
+            <input variable="h1"/>
+            <input variable="m1"/>
+            <input variable="s1"/>
+            <output expression="&quot;Please enter hours,minutes,seconds for the second time&quot;" newline="True"/>
+            <input variable="h2"/>
+            <input variable="m2"/>
+            <input variable="s2"/>
+            <assign variable="tmp" expression="0"/>
+            <assign variable="tmp2" expression="0"/>
+            <if expression="s2&gt;s1">
+                <then>
+                    <assign variable="s3" expression="60-s2+s1"/>
+                    <assign variable="tmp2" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="s3" expression="s1-s2"/>
+                </else>
+            </if>
+            <if expression="m2&gt;m1">
+                <then>
+                    <assign variable="m3" expression="60-m2+m1"/>
+                    <assign variable="tmp2" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="m3" expression="m1-m2"/>
+                </else>
+            </if>
+            <assign variable="m3" expression="m3-tmp"/>
+            <assign variable="h3" expression="h1-h2-tmp2"/>
+            <output expression="h3&amp;&quot;&quot;&amp;m3&amp;&quot;&quot;&amp;s3" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

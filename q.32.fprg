@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="20102"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-30 12:31:48 AM"/>
+        <attribute name="created" value="MjAxMDI7TU9VU1RBRkE7MjAyMi0xMS0zMDsxMjoyNzo0MyBBTTsyMTEy"/>
+        <attribute name="edited" value="MjAxMDI7TU9VU1RBRkE7MjAyMi0xMS0zMDsxMjozMTo0OCBBTTsxOzIyMjA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="word" type="String" array="False" size=""/>
+            <declare name="x, y" type="Integer" array="False" size=""/>
+            <input variable="word"/>
+            <for variable="x" start="0" end="len(word)-1" direction="inc" step="1">
+                <assign variable="y" expression="ToCode(char(word,x))"/>
+                <assign variable="y" expression="y-32"/>
+                <output expression="ToChar(y)" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

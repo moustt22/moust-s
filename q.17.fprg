@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="20102"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-26 06:08:12 PM"/>
+        <attribute name="created" value="MjAxMDI7REVTS1RPUC1PMU1ERU1WOzIwMjItMTEtMTg7MDc6NDQ6MTIgQU07MjU5Nw=="/>
+        <attribute name="edited" value="MjAxMDI7REVTS1RPUC1PMU1ERU1WOzIwMjItMTEtMjY7MDY6MDg6MTIgUE07MjsyNzE5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="s" type="String" array="False" size=""/>
+            <assign variable="s" expression="&quot;&quot;"/>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <input variable="num"/>
+            <if expression="num&gt;0">
+                <then>
+                    <if expression="num&lt;=255">
+                        <then>
+                            <while expression="num&gt;0">
+                                <assign variable="s" expression="(num%2) &amp; s"/>
+                                <assign variable="num" expression="num/2"/>
+                            </while>
+                            <output expression="s" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Out of range&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;error, negative number&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
