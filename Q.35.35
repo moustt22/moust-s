@@ -1,0 +1,3 @@
+mystring=str(input("Please enter name"))
+n=int(input("Please enter your number"))
+print(mystring[0:n]+mystring[n+1: ])

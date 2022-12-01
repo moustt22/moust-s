@@ -1,0 +1,16 @@
+z=0
+word=input("Please enter your word")
+x=1
+y=len(word)-1
+while x<=y :
+    if word[x]==word[y] :
+        pass
+    else:
+        print("not palindrome")
+        z=0
+        x=x+1
+
+        y=y+1
+if z==1:
+    print("palindrome")
+

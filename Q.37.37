@@ -1,0 +1,8 @@
+A=[]
+m=int(input("Please enter number"))
+n=int(input("Please enter number"))
+p=int(input("Please enter number"))
+for i in range (0,n)
+    A.append((i+m))
+A.remove(p)
+print(A)
